@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  course-service:
+    image: stevenpadilla/course_service:1.0.0
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    container_name: course-service
+    expose:
+      - '1709'
+    ports:
+      - '3001:1709'
+    command: node dist/src/index.js
