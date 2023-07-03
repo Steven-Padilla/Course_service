@@ -16,7 +16,7 @@
     },
     "include": [
         "src/*"
-    ],
+, "src/course/config/config.ts"    ],
     "exclude": [
         "node_modules"
     ]
