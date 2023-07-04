@@ -11,7 +11,7 @@ const { port } = config.server;
 // Midlewares
 app.use(bodyParser.json());
 app.use("/api/v1", courseRouter);
-app.use('/api-docs',SwaggerServe,SwaggerSetup)
+app.use('/api-docs/course',SwaggerServe,SwaggerSetup)
 
 // Server
 app.listen(port, () => {

@@ -2,12 +2,14 @@ version: '3.7'
 
 services:
   course-service:
-    image: stevenpadilla/course_service:1.2.0
+    image: stevenpadilla/course_service:1.3.0
     build:
       context: .
       dockerfile: Dockerfile
-      target: production
+      target: imageCourse
     container_name: course-service
+    env_file:
+      - .env
     expose:
       - '1709'
     ports:
